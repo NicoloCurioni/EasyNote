@@ -18,8 +18,6 @@ class NoteListController: UIViewController {
     
     private var addBarButton: UIBarButtonItem = {
         let barButton = UIBarButtonItem()
-        barButton.image = UIImage(systemName: "plus")
-        barButton.style = .plain
         return barButton
     }()
     
@@ -33,6 +31,7 @@ class NoteListController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
+        addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewEntry))
         navigationItem.rightBarButtonItem = addBarButton
         
         #if DEBUG
@@ -41,11 +40,6 @@ class NoteListController: UIViewController {
             Note(name: "NYC is fantastic!", image: "sampleImage"),
             Note(name: "Rome, ehm, a great city", image: "sampleImage"),
             Note(name: "I like Programming", image: "sampleImage")
-//
-//            "Apple iPhone 14, no words..",
-//            "NYC is fantastic!",
-//            "Rome, ehm, a great city",
-//            "I like Programming"
         ]
         #endif
         
@@ -63,5 +57,10 @@ class NoteListController: UIViewController {
             mainTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             mainTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
         ])
+    }
+    
+    @objc
+    private func addNewEntry() {
+        print(#function)
     }
 }
