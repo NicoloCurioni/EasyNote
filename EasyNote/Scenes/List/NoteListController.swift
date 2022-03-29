@@ -26,6 +26,16 @@ class NoteListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        
+        setupConstraints()
+    }
+    
+    // MARK: - Actions
+    
+    // Private
+    
+    private func setupUI() {
         title = "Notes"
         
         mainTableView.delegate = self
@@ -44,8 +54,6 @@ class NoteListController: UIViewController {
         #endif
         
         view.backgroundColor = .white
-        
-        setupConstraints()
     }
     
     private func setupConstraints() {
