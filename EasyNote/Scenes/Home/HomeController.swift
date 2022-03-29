@@ -36,6 +36,10 @@ class HomeController: UIViewController {
         
         [labelName].forEach(mainStackView.addArrangedSubview(_:))
         
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         view.addSubview(mainStackView)
         
         NSLayoutConstraint.activate([

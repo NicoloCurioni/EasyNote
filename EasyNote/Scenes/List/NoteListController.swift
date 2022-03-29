@@ -37,6 +37,10 @@ class NoteListController: UIViewController {
         
         view.backgroundColor = .white
         
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         view.addSubview(mainTableView)
         
         NSLayoutConstraint.activate([
