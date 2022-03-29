@@ -18,6 +18,8 @@
 		A12EF8E527F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8E427F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift */; };
 		A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */; };
 		A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */; };
+		A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */; };
+		A12EF90127F357C800B3C5F5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90027F357C800B3C5F5 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A12EF8E427F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListController.swift; sourceTree = "<group>"; };
 		A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
+		A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		A12EF90027F357C800B3C5F5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */,
 				A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */,
+				A12EF8FF27F357B900B3C5F5 /* Model */,
+				A12EF8FB27F3537F00B3C5F5 /* Views */,
 				A12EF8F727F34A0900B3C5F5 /* Extensions */,
 				A12EF8F627F3488400B3C5F5 /* Logic */,
 				A12EF8F127F347F000B3C5F5 /* Scenes */,
@@ -171,6 +177,30 @@
 				A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A12EF8FB27F3537F00B3C5F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8FC27F3538F00B3C5F5 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A12EF8FC27F3538F00B3C5F5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A12EF8FF27F357B900B3C5F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF90027F357C800B3C5F5 /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +336,11 @@
 				A12EF8C327F330ED00B3C5F5 /* HomeController.swift in Sources */,
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
+				A12EF90127F357C800B3C5F5 /* Note.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,
 				A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */,
 				A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */,
+				A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

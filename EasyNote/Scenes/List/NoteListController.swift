@@ -12,11 +12,11 @@ class NoteListController: UIViewController {
     private var mainTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CardViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
     
-    var notes: [String] = []
+    var notes: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,15 @@ class NoteListController: UIViewController {
         
         #if DEBUG
         notes = [
-            "Apple iPhone 14, no words..",
-            "NYC is fantastic!",
-            "Rome, ehm, a great city",
-            "I like Programming"
+            Note(name: "Apple iPhone 14, no words..", image: "sampleImage"),
+            Note(name: "NYC is fantastic!", image: "sampleImage"),
+            Note(name: "Rome, ehm, a great city", image: "sampleImage"),
+            Note(name: "I like Programming", image: "sampleImage")
+//
+//            "Apple iPhone 14, no words..",
+//            "NYC is fantastic!",
+//            "Rome, ehm, a great city",
+//            "I like Programming"
         ]
         #endif
         
