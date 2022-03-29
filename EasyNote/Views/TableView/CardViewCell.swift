@@ -1,5 +1,5 @@
 //
-//  CardTableViewCell.swift
+//  CardViewCell.swift
 //  EasyNote
 //
 //  Created by Nicolò Curioni on 29/03/22.
