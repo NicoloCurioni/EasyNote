@@ -16,6 +16,13 @@ class NoteListController: UIViewController {
         return tableView
     }()
     
+    private var addBarButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem()
+        barButton.image = UIImage(systemName: "plus")
+        barButton.style = .plain
+        return barButton
+    }()
+    
     var notes: [Note] = []
     
     override func viewDidLoad() {
@@ -25,6 +32,8 @@ class NoteListController: UIViewController {
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        
+        navigationItem.rightBarButtonItem = addBarButton
         
         #if DEBUG
         notes = [
