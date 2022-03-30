@@ -21,6 +21,9 @@
 		A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */; };
 		A12EF90127F357C800B3C5F5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90027F357C800B3C5F5 /* Note.swift */; };
 		A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90327F3601100B3C5F5 /* AddNoteController.swift */; };
+		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
+		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
+		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		A12EF90027F357C800B3C5F5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A12EF90327F3601100B3C5F5 /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
+		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */,
+				A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */,
+				A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */,
+				A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +358,9 @@
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
 				A12EF90127F357C800B3C5F5 /* Note.swift in Sources */,
+				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
+				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
+				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,
 				A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */,
 				A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */,

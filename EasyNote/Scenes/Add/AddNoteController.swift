@@ -9,7 +9,6 @@ import UIKit
 
 class AddNoteController: UIViewController {
     
-    
     private var horizontalTopStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,9 +37,24 @@ class AddNoteController: UIViewController {
         return button
     }()
     
-    private var saveButton: UIButton = {
+    var saveButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(didTapSave), for: .touchUpInside)
+        button.isEnabled = false
+        return button
+    }()
+    
+    private var emptyButton: UIButton = {
         let button = UIButton()
         return button
+    }()
+    
+    private var horizontalBottomStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fill
+        stackView.axis = .horizontal
+        return stackView
     }()
     
     private var imageViewPlaceholder: UIImageView = {
@@ -52,6 +66,7 @@ class AddNoteController: UIViewController {
         imageView.layer.shadowOffset = CGSize(width: 2, height: 2)
         imageView.layer.shadowRadius = 10
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -67,12 +82,13 @@ class AddNoteController: UIViewController {
         textView.textColor = UIColor(named: "CalmGray")
         return textView
     }()
+    
+    private let tapGesture = UITapGestureRecognizer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
         imageViewPlaceholder.image = UIImage(named: "sampleImage")
-        textViewNoteContent.text = "Insert Note name here..."
         #endif
         
         setupUI()
@@ -100,9 +116,17 @@ class AddNoteController: UIViewController {
         
         view.backgroundColor = .white
         
+        // Delegates
+        textViewNoteContent.delegate = self
+        tapGesture.delegate = self
+        
+        imageViewPlaceholder.addGestureRecognizer(tapGesture)
+        
+        tapGesture.addTarget(self, action: #selector(didTapOnImage))
+        
         // Top Buttons
         
-        [cancelButton, saveButton].forEach(horizontalTopStackView.addArrangedSubview(_:))
+        [cancelButton, emptyButton].forEach(horizontalTopStackView.addArrangedSubview(_:))
         
         cancelButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         cancelButton.imageView?.tintColor = .black
@@ -110,9 +134,16 @@ class AddNoteController: UIViewController {
         saveButton.setTitle("Save", for: .normal)
         saveButton.tintColor = .black
         
+        saveButton.backgroundColor = UIColor(named: "BlueButton")
+        saveButton.clipsToBounds = true
+        saveButton.layer.cornerRadius = 10
+        saveButton.tintColor = .white
+        
         [imageViewPlaceholder].forEach(horizontalStackView.addArrangedSubview(_:))
         
-        [horizontalTopStackView, horizontalStackView, textViewNoteContent].forEach(view.addSubview(_:))
+        [horizontalTopStackView, horizontalStackView, textViewNoteContent, horizontalBottomStackView].forEach(view.addSubview(_:))
+        
+        [saveButton].forEach(horizontalBottomStackView.addArrangedSubview(_:))
         
         NSLayoutConstraint.activate([
             
@@ -134,7 +165,21 @@ class AddNoteController: UIViewController {
             horizontalStackView.leadingAnchor.constraint(equalTo: horizontalTopStackView.leadingAnchor, constant: 8),
             horizontalStackView.topAnchor.constraint(equalTo: horizontalTopStackView.bottomAnchor, constant: 8),
             horizontalStackView.trailingAnchor.constraint(equalTo: horizontalTopStackView.trailingAnchor, constant: -8),
+            
+            saveButton.heightAnchor.constraint(equalToConstant: 52),
+            horizontalBottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            horizontalBottomStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -28),
+            horizontalBottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
         ])
+    }
+    
+    // MARK: - Actions
+    
+    // Private
+    
+    @objc
+    private func didTapOnImage() {
+        textViewNoteContent.resignFirstResponder()
     }
     
 }
