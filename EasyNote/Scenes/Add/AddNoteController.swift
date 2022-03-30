@@ -82,7 +82,7 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         textView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         textView.layer.shadowColor = UIColor.gray.cgColor
         textView.layer.shadowOpacity = 0.4
-        textView.layer.shadowRadius = 5
+        textView.layer.shadowRadius = 14
         textView.font = .systemFont(ofSize: 20, weight: .medium)
         textView.textColor = UIColor(named: "CalmGray")
         return textView
@@ -140,11 +140,9 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         }
         
         do {
-            
             if persistentContainer.hasChanges {
                 try persistentContainer.save()
             }
-            
         } catch {
             print(error)
             return
@@ -181,7 +179,7 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         saveButton.backgroundColor = UIColor(named: "BlueButton")
         saveButton.clipsToBounds = true
-        saveButton.layer.cornerRadius = 10
+        saveButton.layer.cornerRadius = 12
         saveButton.tintColor = .white
         
         [imageViewPlaceholder].forEach(horizontalStackView.addArrangedSubview(_:))
@@ -197,10 +195,10 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
             horizontalTopStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
             horizontalTopStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
             
-            textViewNoteContent.heightAnchor.constraint(equalToConstant: 120),
-            textViewNoteContent.leadingAnchor.constraint(equalTo: horizontalStackView.leadingAnchor, constant: 8),
+            textViewNoteContent.heightAnchor.constraint(equalToConstant: 200),
+            textViewNoteContent.leadingAnchor.constraint(equalTo: horizontalStackView.leadingAnchor),
             textViewNoteContent.topAnchor.constraint(equalTo: horizontalStackView.bottomAnchor, constant: 8),
-            textViewNoteContent.trailingAnchor.constraint(equalTo: horizontalStackView.trailingAnchor, constant: -8),
+            textViewNoteContent.trailingAnchor.constraint(equalTo: horizontalStackView.trailingAnchor),
             
             cancelButton.leadingAnchor.constraint(equalTo: horizontalTopStackView.leadingAnchor, constant: 8),
             cancelButton.topAnchor.constraint(equalTo: horizontalTopStackView.topAnchor, constant: 8),
@@ -266,7 +264,7 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         if selectedNote == nil {
             self.navigationItem.title = "New Note"
-            saveButton.setTitle("Update", for: .normal)
+            saveButton.setTitle("Save", for: .normal)
         } else {
             guard let imageData = selectedNote?.image else {
                 return
