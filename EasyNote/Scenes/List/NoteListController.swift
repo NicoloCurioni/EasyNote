@@ -43,12 +43,6 @@ class NoteListController: UIViewController {
     
     // MARK: - Actions
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-       
-        
-    }
-    
     // Private
     
     func showDetailController(at indexPath: IndexPath) {

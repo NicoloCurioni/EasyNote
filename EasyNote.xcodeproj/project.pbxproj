@@ -19,7 +19,6 @@
 		A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */; };
 		A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */; };
 		A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */; };
-		A12EF90127F357C800B3C5F5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90027F357C800B3C5F5 /* Note.swift */; };
 		A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90327F3601100B3C5F5 /* AddNoteController.swift */; };
 		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
 		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
@@ -61,7 +60,6 @@
 		A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListController.swift; sourceTree = "<group>"; };
 		A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
 		A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
-		A12EF90027F357C800B3C5F5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A12EF90327F3601100B3C5F5 /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
 		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
@@ -119,10 +117,8 @@
 			children = (
 				A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */,
 				A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */,
-				A12EF8FF27F357B900B3C5F5 /* Model */,
 				A12EF8FB27F3537F00B3C5F5 /* Views */,
 				A12EF8F727F34A0900B3C5F5 /* Extensions */,
-				A12EF8F627F3488400B3C5F5 /* Logic */,
 				A12EF8F127F347F000B3C5F5 /* Scenes */,
 				A12EF8CA27F330EF00B3C5F5 /* Assets.xcassets */,
 				A12EF8CC27F330EF00B3C5F5 /* LaunchScreen.storyboard */,
@@ -175,13 +171,6 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		A12EF8F627F3488400B3C5F5 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
 		A12EF8F727F34A0900B3C5F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,14 +197,6 @@
 				A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */,
 			);
 			path = TableView;
-			sourceTree = "<group>";
-		};
-		A12EF8FF27F357B900B3C5F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A12EF90027F357C800B3C5F5 /* Note.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		A12EF90227F35FED00B3C5F5 /* Add */ = {
@@ -361,7 +342,6 @@
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
-				A12EF90127F357C800B3C5F5 /* Note.swift in Sources */,
 				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
 				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
 				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,

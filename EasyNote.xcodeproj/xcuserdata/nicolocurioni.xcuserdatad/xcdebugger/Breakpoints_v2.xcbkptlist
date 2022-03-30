@@ -30,8 +30,8 @@
             filePath = "EasyNote/Scenes/List/NoteListController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "showDetailController(at:)"
             landmarkType = "7">
             <Actions>
