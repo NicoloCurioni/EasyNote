@@ -70,5 +70,9 @@ class NoteListController: UIViewController {
     @objc
     private func addNewEntry() {
         print(#function)
+        
+        let noteListController = AddNoteController()
+        noteListController.modalPresentationStyle = .automatic
+        present(noteListController, animated: true)
     }
 }

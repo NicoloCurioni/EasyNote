@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Note: Equatable {
+struct Note {
     var id: String? = UUID().uuidString
     var name: String
     var image: String
