@@ -10,7 +10,7 @@ import CoreData
 
 class NoteListController: UIViewController {
     
-    private var mainTableView: UITableView = {
+    var mainTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(CardViewCell.self, forCellReuseIdentifier: "cell")
@@ -22,24 +22,43 @@ class NoteListController: UIViewController {
         return barButton
     }()
     
-    private lazy var persistentContainer: NSPersistentContainer = {
-            NSPersistentContainer(name: "EasyNote")
-        }()
-    
     var notes: [Note] = []
+    
+    var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var fetchedResultsController : NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupDB()
         setupUI()
         fetchLocalData()
         setupConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchLocalData()
+    }
+    
     // MARK: - Actions
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+       
+        
+    }
+    
     // Private
+    
+    func showDetailController(at indexPath: IndexPath) {
+        let addNoteVC = AddNoteController()
+        let selectedNote : Note = fetchedResultsController.object(at: indexPath) as! Note
+        
+        addNoteVC.selectedNote = selectedNote
+        
+        self.navigationController?.present(addNoteVC, animated: true)
+    }
     
     private func setupUI() {
         title = "Notes"
@@ -50,32 +69,39 @@ class NoteListController: UIViewController {
         addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewEntry))
         navigationItem.rightBarButtonItem = addBarButton
         
-        #if DEBUG
-//        notes = [
-//            Note(name: "Apple iPhone 14, no words..", image: "sampleImage"),
-//            Note(name: "NYC is fantastic!", image: "sampleImage"),
-//            Note(name: "Rome, ehm, a great city", image: "sampleImage"),
-//            Note(name: "I like Programming", image: "sampleImage")
-//        ]
-        #endif
-        
         view.backgroundColor = .white
     }
     
-    private func setupDB() {
-        persistentContainer.loadPersistentStores { persistentStoreDescription, error in
-            if let error = error {
-                print("Unable to Add Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-                
-            } else {
-                print(persistentStoreDescription.url, persistentStoreDescription.type)
-            }
+    private func fetchLocalData() {
+
+        fetchedResultsController = getFetchRequest()
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print(error)
+            return
         }
+        
+        self.mainTableView.reloadData()
     }
     
-    private func fetchLocalData() {
-//        print(persistentContainer.viewContext)
+    func fetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        
+        let sorter = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sorter]
+        
+        return fetchRequest
+    }
+    
+    func getFetchRequest() -> NSFetchedResultsController<NSFetchRequestResult> {
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: persistentContainer, sectionNameKeyPath: nil, cacheName: nil)
+        
+        return fetchedResultsController
     }
     
     private func setupConstraints() {

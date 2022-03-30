@@ -24,6 +24,7 @@
 		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
 		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
 		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
+		A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchedResultsController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */,
+				A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */,
 				A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */,
 				A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */,
 				A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */,
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A12EF8C327F330ED00B3C5F5 /* HomeController.swift in Sources */,
+				A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */,
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
@@ -538,6 +542,7 @@
 				DEVELOPMENT_TEAM = NF5QWX4TJZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -566,6 +571,7 @@
 				DEVELOPMENT_TEAM = NF5QWX4TJZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

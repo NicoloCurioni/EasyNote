@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
-class AddNoteController: UIViewController {
+class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+    var selectedNote : Note? = nil
     
     private var horizontalTopStackView: UIStackView = {
         let stackView = UIStackView()
@@ -94,6 +99,12 @@ class AddNoteController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        checkNote()
+    }
+    
     // MARK: - Actions
     
     // Private
@@ -106,13 +117,47 @@ class AddNoteController: UIViewController {
     @objc
     private func didTapSave() {
         print(#function)
+        guard
+            let image = imageViewPlaceholder.image,
+            textViewNoteContent.text != "" else {
+                return
+            }
+        
+        self.saveLocalData(UUID().uuidString, name: textViewNoteContent.text, date: Date(), image: image)
+    }
+    
+    private func saveLocalData(_ id: String, name: String, date: Date, image: UIImage) {
+        if selectedNote == nil {
+            let entityDescription = NSEntityDescription.entity(forEntityName: "Note", in: persistentContainer)
+            let newNote = Note(entity: entityDescription!, insertInto: persistentContainer)
+            newNote.id = UUID().uuidString
+            newNote.date = date
+            newNote.name = name
+            newNote.image = image.jpegData(compressionQuality: 0.8)
+        } else {
+            selectedNote?.name = textViewNoteContent.text
+            selectedNote?.image = image.jpegData(compressionQuality: 0.8)
+        }
+        
+        do {
+            
+            if persistentContainer.hasChanges {
+                try persistentContainer.save()
+            }
+            
+        } catch {
+            print(error)
+            return
+        }
+        
+        dismiss(animated: true)
     }
     
     // Setup UI
     private func setupUI() {
         
         // Title
-        title = "New Note"
+        checkNote()
         
         view.backgroundColor = .white
         
@@ -177,9 +222,76 @@ class AddNoteController: UIViewController {
     
     // Private
     
+    private func addImage() {
+        let actionSheet = UIAlertController(title: "Photo", message: "Choose or take a new photo", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        actionSheet.addAction(UIAlertAction(title: "Library", style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            
+            self.choosePhotoFromLibrary()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            
+            self.makeNewFromCamera()
+        }))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    private func makeNewFromCamera() {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    private func choosePhotoFromLibrary() {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    private func checkNote() {
+        
+        if selectedNote == nil {
+            self.navigationItem.title = "New Note"
+            saveButton.setTitle("Update", for: .normal)
+        } else {
+            guard let imageData = selectedNote?.image else {
+                return
+            }
+            
+            self.navigationItem.title = "Edit Note"
+            textViewNoteContent.text = selectedNote?.name
+            imageViewPlaceholder.image = UIImage(data: imageData)
+            saveButton.setTitle("Update", for: .normal)
+            
+        }
+    }
+    
     @objc
     private func didTapOnImage() {
         textViewNoteContent.resignFirstResponder()
+        
+        self.addImage()
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageViewPlaceholder.image = selectedImage
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }
