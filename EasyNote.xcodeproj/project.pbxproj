@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */; };
 		A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */; };
-		A12EF8C327F330ED00B3C5F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8C227F330ED00B3C5F5 /* ViewController.swift */; };
+		A12EF8C327F330ED00B3C5F5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8C227F330ED00B3C5F5 /* HomeController.swift */; };
 		A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8C727F330ED00B3C5F5 /* EasyNote.xcdatamodeld */; };
 		A12EF8CB27F330EF00B3C5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12EF8CA27F330EF00B3C5F5 /* Assets.xcassets */; };
 		A12EF8CE27F330EF00B3C5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12EF8CC27F330EF00B3C5F5 /* LaunchScreen.storyboard */; };
 		A12EF8D927F330EF00B3C5F5 /* EasyNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8D827F330EF00B3C5F5 /* EasyNoteTests.swift */; };
 		A12EF8E327F330EF00B3C5F5 /* EasyNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8E227F330EF00B3C5F5 /* EasyNoteUITests.swift */; };
 		A12EF8E527F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8E427F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift */; };
+		A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */; };
+		A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */; };
+		A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */; };
+		A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90327F3601100B3C5F5 /* AddNoteController.swift */; };
+		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
+		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
+		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
+		A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		A12EF8BB27F330ED00B3C5F5 /* EasyNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A12EF8C227F330ED00B3C5F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A12EF8C227F330ED00B3C5F5 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A12EF8C827F330ED00B3C5F5 /* EasyNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyNote.xcdatamodel; sourceTree = "<group>"; };
 		A12EF8CA27F330EF00B3C5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12EF8CD27F330EF00B3C5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		A12EF8DE27F330EF00B3C5F5 /* EasyNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12EF8E227F330EF00B3C5F5 /* EasyNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNoteUITests.swift; sourceTree = "<group>"; };
 		A12EF8E427F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListController.swift; sourceTree = "<group>"; };
+		A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
+		A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		A12EF90327F3601100B3C5F5 /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
+		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchedResultsController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +117,9 @@
 			children = (
 				A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */,
 				A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */,
-				A12EF8C227F330ED00B3C5F5 /* ViewController.swift */,
+				A12EF8FB27F3537F00B3C5F5 /* Views */,
+				A12EF8F727F34A0900B3C5F5 /* Extensions */,
+				A12EF8F127F347F000B3C5F5 /* Scenes */,
 				A12EF8CA27F330EF00B3C5F5 /* Assets.xcassets */,
 				A12EF8CC27F330EF00B3C5F5 /* LaunchScreen.storyboard */,
 				A12EF8CF27F330EF00B3C5F5 /* Info.plist */,
@@ -125,6 +143,68 @@
 				A12EF8E427F330EF00B3C5F5 /* EasyNoteUITestsLaunchTests.swift */,
 			);
 			path = EasyNoteUITests;
+			sourceTree = "<group>";
+		};
+		A12EF8F127F347F000B3C5F5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF90227F35FED00B3C5F5 /* Add */,
+				A12EF8F327F3481100B3C5F5 /* List */,
+				A12EF8F227F347FB00B3C5F5 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A12EF8F227F347FB00B3C5F5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8C227F330ED00B3C5F5 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A12EF8F327F3481100B3C5F5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8F427F3484B00B3C5F5 /* NoteListController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A12EF8F727F34A0900B3C5F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */,
+				A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */,
+				A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */,
+				A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */,
+				A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A12EF8FB27F3537F00B3C5F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8FC27F3538F00B3C5F5 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A12EF8FC27F3538F00B3C5F5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A12EF90227F35FED00B3C5F5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				A12EF90327F3601100B3C5F5 /* AddNoteController.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12EF8C327F330ED00B3C5F5 /* ViewController.swift in Sources */,
+				A12EF8C327F330ED00B3C5F5 /* HomeController.swift in Sources */,
+				A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */,
+				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
+				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
+				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
+				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
+				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,
 				A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */,
+				A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */,
+				A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +522,7 @@
 				DEVELOPMENT_TEAM = NF5QWX4TJZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -462,6 +551,7 @@
 				DEVELOPMENT_TEAM = NF5QWX4TJZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

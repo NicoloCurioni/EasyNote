@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class HomeController: UIViewController {
     
     private var mainStackView: UIStackView = {
         let stackView = UIStackView()
@@ -31,10 +30,16 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        title = "EasyNote"
+        
         labelName.text = "Hello, World!"
         
         [labelName].forEach(mainStackView.addArrangedSubview(_:))
         
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         view.addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
