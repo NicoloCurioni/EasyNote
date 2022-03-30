@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Note {
-    var id: String? = UUID().uuidString
-    var name: String
-    var image: String
-}
+//struct Note {
+//    var id: String? = UUID().uuidString
+//    var name: String
+//    var image: String
+//}

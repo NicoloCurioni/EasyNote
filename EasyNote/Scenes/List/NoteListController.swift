@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteListController: UIViewController {
     
@@ -21,13 +22,18 @@ class NoteListController: UIViewController {
         return barButton
     }()
     
+    private lazy var persistentContainer: NSPersistentContainer = {
+            NSPersistentContainer(name: "EasyNote")
+        }()
+    
     var notes: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDB()
         setupUI()
-        
+        fetchLocalData()
         setupConstraints()
     }
     
@@ -45,15 +51,31 @@ class NoteListController: UIViewController {
         navigationItem.rightBarButtonItem = addBarButton
         
         #if DEBUG
-        notes = [
-            Note(name: "Apple iPhone 14, no words..", image: "sampleImage"),
-            Note(name: "NYC is fantastic!", image: "sampleImage"),
-            Note(name: "Rome, ehm, a great city", image: "sampleImage"),
-            Note(name: "I like Programming", image: "sampleImage")
-        ]
+//        notes = [
+//            Note(name: "Apple iPhone 14, no words..", image: "sampleImage"),
+//            Note(name: "NYC is fantastic!", image: "sampleImage"),
+//            Note(name: "Rome, ehm, a great city", image: "sampleImage"),
+//            Note(name: "I like Programming", image: "sampleImage")
+//        ]
         #endif
         
         view.backgroundColor = .white
+    }
+    
+    private func setupDB() {
+        persistentContainer.loadPersistentStores { persistentStoreDescription, error in
+            if let error = error {
+                print("Unable to Add Persistent Store")
+                print("\(error), \(error.localizedDescription)")
+                
+            } else {
+                print(persistentStoreDescription.url, persistentStoreDescription.type)
+            }
+        }
+    }
+    
+    private func fetchLocalData() {
+//        print(persistentContainer.viewContext)
     }
     
     private func setupConstraints() {

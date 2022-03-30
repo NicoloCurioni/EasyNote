@@ -21,8 +21,10 @@ extension NoteListController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardViewCell
         let note = notes[indexPath.row]
         
+        let imageData = UIImage(data: note.image ?? Data())
+        
         cell.noteLabel.text = note.name
-        cell.noteImageView.image = UIImage(named: note.image)
+        cell.noteImageView.image = imageData
         
         return cell
     }
