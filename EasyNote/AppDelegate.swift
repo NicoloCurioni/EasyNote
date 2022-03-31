@@ -7,12 +7,20 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // NOTE: In order to test Firebase features,
+        // don't forget to remove the actual `GoogleService-Info.plist`
+        // and import your `GoogleService-Info.plist` file from Firebase
+        // in order to use the app.
+        
+        FirebaseApp.configure()
+        
         return true
     }
 

@@ -31,6 +31,10 @@
 		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
 		A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */; };
 		A1A35E9227F4B057006CDA58 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E9127F4B057006CDA58 /* ColorAssets.swift */; };
+		A1ADE27327F5D12F006C30B0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27227F5D12F006C30B0 /* FirebaseAnalytics */; };
+		A1ADE27527F5D12F006C30B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27427F5D12F006C30B0 /* FirebaseAuth */; };
+		A1ADE27727F5D12F006C30B0 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27627F5D12F006C30B0 /* FirebaseRemoteConfig */; };
+		A1ADE27A27F5D2A5006C30B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1ADE27927F5D2A5006C30B0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,7 @@
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchedResultsController+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E9127F4B057006CDA58 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		A1ADE27927F5D2A5006C30B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1ADE27727F5D12F006C30B0 /* FirebaseRemoteConfig in Frameworks */,
+				A1ADE27327F5D12F006C30B0 /* FirebaseAnalytics in Frameworks */,
+				A1ADE27527F5D12F006C30B0 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +271,7 @@
 		A1A35E8F27F4B03D006CDA58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1ADE27827F5D29A006C30B0 /* Firebase */,
 				A156D3D427F59AE7005C7CD9 /* Localizations */,
 				A1A35E9027F4B048006CDA58 /* Colors */,
 			);
@@ -275,6 +284,14 @@
 				A1A35E9127F4B057006CDA58 /* ColorAssets.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		A1ADE27827F5D29A006C30B0 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A1ADE27927F5D2A5006C30B0 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +310,11 @@
 			dependencies = (
 			);
 			name = EasyNote;
+			packageProductDependencies = (
+				A1ADE27227F5D12F006C30B0 /* FirebaseAnalytics */,
+				A1ADE27427F5D12F006C30B0 /* FirebaseAuth */,
+				A1ADE27627F5D12F006C30B0 /* FirebaseRemoteConfig */,
+			);
 			productName = EasyNote;
 			productReference = A12EF8BB27F330ED00B3C5F5 /* EasyNote.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +387,9 @@
 				it,
 			);
 			mainGroup = A12EF8B227F330ED00B3C5F5;
+			packageReferences = (
+				A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A12EF8BC27F330ED00B3C5F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -384,6 +409,7 @@
 				A12EF8CE27F330EF00B3C5F5 /* LaunchScreen.storyboard in Resources */,
 				A156D3D927F59B2B005C7CD9 /* Localizable.strings in Resources */,
 				A12EF8CB27F330EF00B3C5F5 /* Assets.xcassets in Resources */,
+				A1ADE27A27F5D2A5006C30B0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +633,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NF5QWX4TJZ;
+				DEVELOPMENT_TEAM = N698YWPB5X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
@@ -636,7 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NF5QWX4TJZ;
+				DEVELOPMENT_TEAM = N698YWPB5X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyNote/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "In order to use EasyNote, you need to grant access to camera";
@@ -774,6 +800,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1ADE27227F5D12F006C30B0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A1ADE27427F5D12F006C30B0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A1ADE27627F5D12F006C30B0 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A12EF8C727F330ED00B3C5F5 /* EasyNote.xcdatamodeld */ = {
