@@ -23,6 +23,8 @@
 		A156D3CF27F58E19005C7CD9 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3CE27F58E19005C7CD9 /* Buttons.swift */; };
 		A156D3D127F59164005C7CD9 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D027F59164005C7CD9 /* TextFields.swift */; };
 		A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */; };
+		A156D3D627F59AF8005C7CD9 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D527F59AF8005C7CD9 /* Localizable.swift */; };
+		A156D3D927F59B2B005C7CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A156D3DB27F59B2B005C7CD9 /* Localizable.strings */; };
 		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
 		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
 		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
@@ -54,7 +56,6 @@
 		A12EF8C227F330ED00B3C5F5 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		A12EF8C827F330ED00B3C5F5 /* EasyNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyNote.xcdatamodel; sourceTree = "<group>"; };
 		A12EF8CA27F330EF00B3C5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A12EF8CD27F330EF00B3C5F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A12EF8CF27F330EF00B3C5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12EF8D427F330EF00B3C5F5 /* EasyNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12EF8D827F330EF00B3C5F5 /* EasyNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNoteTests.swift; sourceTree = "<group>"; };
@@ -68,6 +69,10 @@
 		A156D3CE27F58E19005C7CD9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A156D3D027F59164005C7CD9 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
+		A156D3D527F59AF8005C7CD9 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		A156D3DA27F59B2B005C7CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A156D3DC27F59B34005C7CD9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A156D3DD27F59B3C005C7CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -219,9 +224,19 @@
 			path = Add;
 			sourceTree = "<group>";
 		};
+		A156D3D427F59AE7005C7CD9 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				A156D3D527F59AF8005C7CD9 /* Localizable.swift */,
+				A156D3DB27F59B2B005C7CD9 /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
 		A1A35E8F27F4B03D006CDA58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A156D3D427F59AE7005C7CD9 /* Localizations */,
 				A1A35E9027F4B048006CDA58 /* Colors */,
 			);
 			path = Resources;
@@ -320,7 +335,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				it,
 			);
 			mainGroup = A12EF8B227F330ED00B3C5F5;
 			productRefGroup = A12EF8BC27F330ED00B3C5F5 /* Products */;
@@ -340,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A12EF8CE27F330EF00B3C5F5 /* LaunchScreen.storyboard in Resources */,
+				A156D3D927F59B2B005C7CD9 /* Localizable.strings in Resources */,
 				A12EF8CB27F330EF00B3C5F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +386,7 @@
 				A1A35E9227F4B057006CDA58 /* ColorAssets.swift in Sources */,
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
+				A156D3D627F59AF8005C7CD9 /* Localizable.swift in Sources */,
 				A156D3D127F59164005C7CD9 /* TextFields.swift in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
 				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
@@ -420,9 +437,18 @@
 		A12EF8CC27F330EF00B3C5F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A12EF8CD27F330EF00B3C5F5 /* Base */,
+				A156D3DD27F59B3C005C7CD9 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A156D3DB27F59B2B005C7CD9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A156D3DA27F59B2B005C7CD9 /* en */,
+				A156D3DC27F59B34005C7CD9 /* it */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -432,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -493,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

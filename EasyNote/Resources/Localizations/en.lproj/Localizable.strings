@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  EasyNote
+
+  Created by Nicolò Curioni on 31/03/22.
+  
+*/
+
+// # HOME SCENE
+
+"LOC_HOME_TITLE" = "Welcome to EasyNote";
+"LOC_HOME_LOGIN" = "Login";
+"LOC_HOME_REGISTER" = "Register";
+
+

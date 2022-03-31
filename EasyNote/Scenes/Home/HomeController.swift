@@ -9,13 +9,19 @@ import UIKit
 
 class HomeController: UIViewController {
     
-    private var horizontalBottomStackView: UIStackView = {
+    private var welcomeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.tintColor = .black
+        label.font = .systemFont(ofSize: 30, weight: .medium)
+        return label
+    }()
+    
+    private var horizontalTopStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         stackView.axis = .horizontal
-        stackView.spacing = 2
-        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -52,12 +58,13 @@ class HomeController: UIViewController {
     // Private
     
     private func setupUI() {
-        title = "EasyNote"
+        
+        welcomeLabel.text = Localizable.homeTitle
         
         view.backgroundColor = UIColor.easyNote.appBackground
         
-        loginButton.setButtonTitle("Login")
-        registerButton.setButtonTitle("Register")
+        loginButton.setButtonTitle(Localizable.homeLogin)
+        registerButton.setButtonTitle(Localizable.homeRegister)
         
         setupConstraints()
     }
@@ -66,9 +73,15 @@ class HomeController: UIViewController {
         
         [loginButton, registerButton].forEach(verticalBottomStackView.addArrangedSubview(_:))
         
-        [verticalBottomStackView].forEach(view.addSubview(_:))
+        [welcomeLabel].forEach(horizontalTopStackView.addArrangedSubview(_:))
+        
+        [horizontalTopStackView, verticalBottomStackView].forEach(view.addSubview(_:))
         
         NSLayoutConstraint.activate([
+            
+            horizontalTopStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            horizontalTopStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            horizontalTopStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             verticalBottomStackView.heightAnchor.constraint(equalToConstant: 100),
             
