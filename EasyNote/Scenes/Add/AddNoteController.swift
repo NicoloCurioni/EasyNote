@@ -42,8 +42,8 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         return button
     }()
     
-    var saveButton: UIButton = {
-        let button = UIButton()
+    var saveButton: GenericButton = {
+        let button = GenericButton()
         button.addTarget(self, action: #selector(didTapSave), for: .touchUpInside)
         button.isEnabled = false
         return button
@@ -177,9 +177,8 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         saveButton.setTitle("Save", for: .normal)
         saveButton.tintColor = .black
         
-        saveButton.backgroundColor = UIColor(named: "BlueButton")
+//        saveButton.backgroundColor = UIColor(named: "BlueButton")
         saveButton.clipsToBounds = true
-        saveButton.layer.cornerRadius = 12
         saveButton.tintColor = .white
         
         [imageViewPlaceholder].forEach(horizontalStackView.addArrangedSubview(_:))
