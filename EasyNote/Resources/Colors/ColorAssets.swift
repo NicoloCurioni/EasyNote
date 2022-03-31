@@ -16,7 +16,11 @@ extension UIColor {
     // MARK: - Common colors
     public struct EasyNote {
         
-        // MARK: - Gray scale -
+        // MARK: - Global Background -
+        
+        public static let appBackground: UIColor = UIColor(named: "AppBackground")!
+        
+        // MARK: - Button -
         
         public static let blueCalmApp: UIColor = UIColor(named: "BlueButton")!
         

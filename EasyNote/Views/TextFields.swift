@@ -1,5 +1,5 @@
 //
-//  Buttons.swift
+//  TextFields.swift
 //  EasyNote
 //
 //  Created by Nicolò Curioni on 31/03/22.
@@ -7,9 +7,7 @@
 
 import UIKit
 
-class GenericButton: UIButton {
-    
-    var buttonBackgroundColor = UIColor.easyNote.blueCalmApp
+class GenericField: UITextField {
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -27,7 +25,6 @@ class GenericButton: UIButton {
     func setup() {
         self.clipsToBounds = true
         self.layer.cornerRadius = 12
-        self.backgroundColor = buttonBackgroundColor
-        self.tintColor = .white
+        self.backgroundColor = UIColor.easyNote.blueCalmApp
     }
 }

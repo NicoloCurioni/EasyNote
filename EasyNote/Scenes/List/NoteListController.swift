@@ -57,6 +57,8 @@ class NoteListController: UIViewController {
     private func setupUI() {
         title = "Notes"
         
+        view.backgroundColor = UIColor.easyNote.appBackground
+        
         mainTableView.delegate = self
         mainTableView.dataSource = self
         

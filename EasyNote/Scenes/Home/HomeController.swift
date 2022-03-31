@@ -9,45 +9,86 @@ import UIKit
 
 class HomeController: UIViewController {
     
-    private var mainStackView: UIStackView = {
+    private var horizontalBottomStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fill
+        stackView.axis = .horizontal
         stackView.spacing = 2
         stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
-    private var labelName: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        return label
+    private var verticalBottomStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .equalSpacing
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
+    var loginButton: GenericButton = {
+        let button = GenericButton()
+        button.addTarget(self, action: #selector(didTapGotoLogin), for: .touchUpInside)
+        button.isEnabled = false
+        return button
+    }()
+    
+    var registerButton: GenericButton = {
+        let button = GenericButton()
+        button.addTarget(self, action: #selector(didTapGotoRegister), for: .touchUpInside)
+        button.isEnabled = false
+        return button
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        
+        setupUI()
+    }
+    
+    // MARK: - Methods
+    
+    // Private
+    
+    private func setupUI() {
         title = "EasyNote"
         
-        labelName.text = "Hello, World!"
+        view.backgroundColor = UIColor.easyNote.appBackground
         
-        [labelName].forEach(mainStackView.addArrangedSubview(_:))
+        loginButton.setButtonTitle("Login")
+        registerButton.setButtonTitle("Register")
         
         setupConstraints()
     }
     
     private func setupConstraints() {
-        view.addSubview(mainStackView)
+        
+        [loginButton, registerButton].forEach(verticalBottomStackView.addArrangedSubview(_:))
+        
+        [verticalBottomStackView].forEach(view.addSubview(_:))
         
         NSLayoutConstraint.activate([
-            mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            labelName.centerXAnchor.constraint(equalTo: mainStackView.centerXAnchor),
-            labelName.centerYAnchor.constraint(equalTo: mainStackView.centerYAnchor),
+            
+            verticalBottomStackView.heightAnchor.constraint(equalToConstant: 100),
+            
+            loginButton.heightAnchor.constraint(equalToConstant: 46),
+            registerButton.heightAnchor.constraint(equalToConstant: 46),
+            
+            verticalBottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            verticalBottomStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -28),
+            verticalBottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
         ])
+    }
+    
+    @objc
+    private func didTapGotoLogin() {
+        print(#function)
+    }
+    
+    @objc
+    private func didTapGotoRegister() {
+        print(#function)
     }
 }
 

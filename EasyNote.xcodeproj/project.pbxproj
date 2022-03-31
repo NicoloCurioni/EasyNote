@@ -21,6 +21,8 @@
 		A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */; };
 		A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EF90327F3601100B3C5F5 /* AddNoteController.swift */; };
 		A156D3CF27F58E19005C7CD9 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3CE27F58E19005C7CD9 /* Buttons.swift */; };
+		A156D3D127F59164005C7CD9 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D027F59164005C7CD9 /* TextFields.swift */; };
+		A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */; };
 		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
 		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
 		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
@@ -64,6 +66,8 @@
 		A12EF8FD27F353DB00B3C5F5 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		A12EF90327F3601100B3C5F5 /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
 		A156D3CE27F58E19005C7CD9 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		A156D3D027F59164005C7CD9 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A12EF8F927F34A3400B3C5F5 /* TableView+Extensions.swift */,
+				A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */,
 				A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */,
 				A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */,
 				A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */,
@@ -193,6 +198,7 @@
 			children = (
 				A12EF8FC27F3538F00B3C5F5 /* TableView */,
 				A156D3CE27F58E19005C7CD9 /* Buttons.swift */,
+				A156D3D027F59164005C7CD9 /* TextFields.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,9 +370,11 @@
 				A1A35E9227F4B057006CDA58 /* ColorAssets.swift in Sources */,
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
+				A156D3D127F59164005C7CD9 /* TextFields.swift in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
 				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
 				A156D3CF27F58E19005C7CD9 /* Buttons.swift in Sources */,
+				A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */,
 				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
 				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,

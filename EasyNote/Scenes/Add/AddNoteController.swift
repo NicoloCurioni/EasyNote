@@ -157,7 +157,7 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         // Title
         checkNote()
         
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.easyNote.appBackground
         
         // Delegates
         textViewNoteContent.delegate = self
@@ -175,11 +175,6 @@ class AddNoteController: UIViewController, UIImagePickerControllerDelegate, UINa
         cancelButton.imageView?.tintColor = .black
         cancelButton.frame.size = CGSize(width: 60, height: 60)
         saveButton.setTitle("Save", for: .normal)
-        saveButton.tintColor = .black
-        
-//        saveButton.backgroundColor = UIColor(named: "BlueButton")
-        saveButton.clipsToBounds = true
-        saveButton.tintColor = .white
         
         [imageViewPlaceholder].forEach(horizontalStackView.addArrangedSubview(_:))
         
