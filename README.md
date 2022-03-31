@@ -8,8 +8,8 @@ EasyNote is a simple app, that use CoreData to persist data, Supabase for authen
 
 - [x]  Simple UI
 - [x]  Add CoreData
-- [ ]   Add Supabase (Authentication)
-- [ ]   Firebase (Remote Config)
+- [ ]  Add Firebase (Authentication)
+- [ ]  Add Firebase (Remote Config)
 
 That's it, I hope you enjoy this simple project.
 
