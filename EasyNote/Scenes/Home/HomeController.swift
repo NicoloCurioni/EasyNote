@@ -36,14 +36,14 @@ class HomeController: UIViewController {
     var loginButton: GenericButton = {
         let button = GenericButton()
         button.addTarget(self, action: #selector(didTapGotoLogin), for: .touchUpInside)
-        button.isEnabled = false
+        button.isEnabled = true
         return button
     }()
     
     var registerButton: GenericButton = {
         let button = GenericButton()
         button.addTarget(self, action: #selector(didTapGotoRegister), for: .touchUpInside)
-        button.isEnabled = false
+        button.isEnabled = true
         return button
     }()
 
@@ -92,6 +92,15 @@ class HomeController: UIViewController {
             verticalBottomStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -28),
             verticalBottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
         ])
+    }
+    
+    private func didTapShowHomeController() {
+        let noteListController = NoteListController()
+        let navigationController = UINavigationController(rootViewController: noteListController)
+        
+        navigationController.modalPresentationStyle = .fullScreen
+        
+        self.navigationController?.present(navigationController, animated: true)
     }
     
     @objc
