@@ -12,4 +12,12 @@
 "LOC_HOME_LOGIN" = "Login";
 "LOC_HOME_REGISTER" = "Register";
 
+// # Authentication
 
+// Login
+
+"LOC_AUTH_LOGIN_TITLE" = "Login";
+
+// Login
+
+"LOC_AUTH_REGISTER_TITLE" = "Register";

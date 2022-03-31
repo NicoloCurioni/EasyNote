@@ -25,6 +25,7 @@
 		A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D227F595FB005C7CD9 /* Button+Extensions.swift */; };
 		A156D3D627F59AF8005C7CD9 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3D527F59AF8005C7CD9 /* Localizable.swift */; };
 		A156D3D927F59B2B005C7CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A156D3DB27F59B2B005C7CD9 /* Localizable.strings */; };
+		A156D3E227F5A69A005C7CD9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156D3E127F5A69A005C7CD9 /* LoginController.swift */; };
 		A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */; };
 		A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */; };
 		A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */; };
@@ -73,6 +74,7 @@
 		A156D3DA27F59B2B005C7CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A156D3DC27F59B34005C7CD9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A156D3DD27F59B3C005C7CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A156D3E127F5A69A005C7CD9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A1A35E7E27F462F2006CDA58 /* TextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8027F46531006CDA58 /* GestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		A12EF8F127F347F000B3C5F5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A156D3DE27F5A665005C7CD9 /* Authentication */,
 				A12EF90227F35FED00B3C5F5 /* Add */,
 				A12EF8F327F3481100B3C5F5 /* List */,
 				A12EF8F227F347FB00B3C5F5 /* Home */,
@@ -231,6 +234,30 @@
 				A156D3DB27F59B2B005C7CD9 /* Localizable.strings */,
 			);
 			path = Localizations;
+			sourceTree = "<group>";
+		};
+		A156D3DE27F5A665005C7CD9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A156D3E027F5A676005C7CD9 /* Register */,
+				A156D3DF27F5A66E005C7CD9 /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A156D3DF27F5A66E005C7CD9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A156D3E127F5A69A005C7CD9 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A156D3E027F5A676005C7CD9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		A1A35E8F27F4B03D006CDA58 /* Resources */ = {
@@ -394,6 +421,7 @@
 				A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */,
 				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
 				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,
+				A156D3E227F5A69A005C7CD9 /* LoginController.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,
 				A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */,
 				A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */,

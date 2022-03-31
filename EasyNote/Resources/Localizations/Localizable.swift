@@ -25,6 +25,12 @@ public struct Localizable {
     /// Home Register Button -> `Login`
     public static let homeRegister = "LOC_HOME_REGISTER".localizeMe()
     
+    /// Login Page Title -> `Login`
+    public static let loginAuthLoginTitle = "LOC_AUTH_LOGIN_TITLE".localizeMe()
+    
+    /// Register Page Title -> `Register`
+    public static let loginAuthRegisterTitle = "LOC_AUTH_REGISTER_TITLE".localizeMe()
+    
     
 }
 

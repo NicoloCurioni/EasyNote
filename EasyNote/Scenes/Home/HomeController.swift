@@ -94,18 +94,18 @@ class HomeController: UIViewController {
         ])
     }
     
-    private func didTapShowHomeController() {
-        let noteListController = NoteListController()
-        let navigationController = UINavigationController(rootViewController: noteListController)
-        
-        navigationController.modalPresentationStyle = .fullScreen
-        
-        self.navigationController?.present(navigationController, animated: true)
+    private func didTapShowController(_ controller: UIViewController) {
+        controller.modalPresentationStyle = .automatic
+        present(controller, animated: true)
     }
     
     @objc
     private func didTapGotoLogin() {
         print(#function)
+        
+        let loginController = LoginController()
+        
+        didTapShowController(loginController)
     }
     
     @objc
