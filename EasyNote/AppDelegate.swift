@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 import Firebase
 
+var appEnvironment = EnvironmentManager.appEnvironment
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -34,6 +34,24 @@
 		A1ADE27327F5D12F006C30B0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27227F5D12F006C30B0 /* FirebaseAnalytics */; };
 		A1ADE27527F5D12F006C30B0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27427F5D12F006C30B0 /* FirebaseAuth */; };
 		A1ADE27727F5D12F006C30B0 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = A1ADE27627F5D12F006C30B0 /* FirebaseRemoteConfig */; };
+		A1EEA10027F6E56A004871E0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA0FF27F6E56A004871E0 /* HTTPMethod.swift */; };
+		A1EEA10227F6E778004871E0 /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA10127F6E778004871E0 /* ParametersEncoding.swift */; };
+		A1EEA10427F6E830004871E0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA10327F6E830004871E0 /* NetworkError.swift */; };
+		A1EEA10727F6E914004871E0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA10627F6E914004871E0 /* Error.swift */; };
+		A1EEA10927F6E9F2004871E0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA10827F6E9F2004871E0 /* Task.swift */; };
+		A1EEA10B27F6EAA7004871E0 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA10A27F6EAA7004871E0 /* BaseAPI.swift */; };
+		A1EEA10E27F6EB1B004871E0 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = A1EEA10D27F6EB1B004871E0 /* ObjectMapper */; };
+		A1EEA11127F6EB55004871E0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A1EEA11027F6EB55004871E0 /* SwiftyJSON */; };
+		A1EEA11427F6ECC3004871E0 /* Siesta in Frameworks */ = {isa = PBXBuildFile; productRef = A1EEA11327F6ECC3004871E0 /* Siesta */; };
+		A1EEA11727F6ED14004871E0 /* Siesta+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA11627F6ED14004871E0 /* Siesta+SwiftyJSON.swift */; };
+		A1EEA11A27F6EE48004871E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA11927F6EE48004871E0 /* Constants.swift */; };
+		A1EEA11C27F6EF94004871E0 /* APIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA11B27F6EF94004871E0 /* APIContainer.swift */; };
+		A1EEA12227F6F130004871E0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12127F6F130004871E0 /* Environment.swift */; };
+		A1EEA12427F6FBC4004871E0 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12327F6FBC4004871E0 /* UserAPI.swift */; };
+		A1EEA12627F6FC41004871E0 /* EnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12527F6FC41004871E0 /* EnvironmentManager.swift */; };
+		A1EEA12827F6FD2C004871E0 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12727F6FD2C004871E0 /* URLComponentsExtension.swift */; };
+		A1EEA12B27F7028E004871E0 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12A27F7028E004871E0 /* ServiceProtocol.swift */; };
+		A1EEA12D27F70329004871E0 /* EnvironmentPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEA12C27F70329004871E0 /* EnvironmentPurpose.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +101,21 @@
 		A1A35E8227F465D1006CDA58 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E8927F4862B006CDA58 /* FetchedResultsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchedResultsController+Extensions.swift"; sourceTree = "<group>"; };
 		A1A35E9127F4B057006CDA58 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		A1EEA0FF27F6E56A004871E0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A1EEA10127F6E778004871E0 /* ParametersEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
+		A1EEA10327F6E830004871E0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A1EEA10627F6E914004871E0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		A1EEA10827F6E9F2004871E0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A1EEA10A27F6EAA7004871E0 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		A1EEA11627F6ED14004871E0 /* Siesta+SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Siesta+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		A1EEA11927F6EE48004871E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1EEA11B27F6EF94004871E0 /* APIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContainer.swift; sourceTree = "<group>"; };
+		A1EEA12127F6F130004871E0 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A1EEA12327F6FBC4004871E0 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		A1EEA12527F6FC41004871E0 /* EnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentManager.swift; sourceTree = "<group>"; };
+		A1EEA12727F6FD2C004871E0 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
+		A1EEA12A27F7028E004871E0 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		A1EEA12C27F70329004871E0 /* EnvironmentPurpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPurpose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EEA10E27F6EB1B004871E0 /* ObjectMapper in Frameworks */,
+				A1EEA11427F6ECC3004871E0 /* Siesta in Frameworks */,
 				A1ADE27727F5D12F006C30B0 /* FirebaseRemoteConfig in Frameworks */,
 				A1ADE27327F5D12F006C30B0 /* FirebaseAnalytics in Frameworks */,
+				A1EEA11127F6EB55004871E0 /* SwiftyJSON in Frameworks */,
 				A1ADE27527F5D12F006C30B0 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +174,8 @@
 			children = (
 				A12EF8BE27F330ED00B3C5F5 /* AppDelegate.swift */,
 				A12EF8C027F330ED00B3C5F5 /* SceneDelegate.swift */,
+				A1EEA11D27F6F09A004871E0 /* Utilities */,
+				A1EEA0FD27F6E549004871E0 /* Network */,
 				A1A35E8F27F4B03D006CDA58 /* Resources */,
 				A12EF8FB27F3537F00B3C5F5 /* Views */,
 				A12EF8F727F34A0900B3C5F5 /* Extensions */,
@@ -275,6 +313,99 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		A1EEA0FD27F6E549004871E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA12927F6FFB1004871E0 /* Protocols */,
+				A1EEA11527F6ED03004871E0 /* Extensions */,
+				A1EEA10527F6E909004871E0 /* Legacy Network */,
+				A1EEA0FE27F6E550004871E0 /* Enums */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A1EEA0FE27F6E550004871E0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA0FF27F6E56A004871E0 /* HTTPMethod.swift */,
+				A1EEA10327F6E830004871E0 /* NetworkError.swift */,
+				A1EEA10827F6E9F2004871E0 /* Task.swift */,
+				A1EEA10127F6E778004871E0 /* ParametersEncoding.swift */,
+				A1EEA12C27F70329004871E0 /* EnvironmentPurpose.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		A1EEA10527F6E909004871E0 /* Legacy Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA11827F6EE41004871E0 /* Models */,
+				A1EEA10627F6E914004871E0 /* Error.swift */,
+				A1EEA10A27F6EAA7004871E0 /* BaseAPI.swift */,
+				A1EEA11B27F6EF94004871E0 /* APIContainer.swift */,
+				A1EEA12327F6FBC4004871E0 /* UserAPI.swift */,
+			);
+			path = "Legacy Network";
+			sourceTree = "<group>";
+		};
+		A1EEA11527F6ED03004871E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA11627F6ED14004871E0 /* Siesta+SwiftyJSON.swift */,
+				A1EEA12727F6FD2C004871E0 /* URLComponentsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A1EEA11827F6EE41004871E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA11927F6EE48004871E0 /* Constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1EEA11D27F6F09A004871E0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA11E27F6F0F2004871E0 /* Managers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A1EEA11E27F6F0F2004871E0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA11F27F6F123004871E0 /* Environment */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A1EEA11F27F6F123004871E0 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA12027F6F12B004871E0 /* Model */,
+				A1EEA12527F6FC41004871E0 /* EnvironmentManager.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		A1EEA12027F6F12B004871E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA12127F6F130004871E0 /* Environment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1EEA12927F6FFB1004871E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A1EEA12A27F7028E004871E0 /* ServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,6 +426,9 @@
 				A1ADE27227F5D12F006C30B0 /* FirebaseAnalytics */,
 				A1ADE27427F5D12F006C30B0 /* FirebaseAuth */,
 				A1ADE27627F5D12F006C30B0 /* FirebaseRemoteConfig */,
+				A1EEA10D27F6EB1B004871E0 /* ObjectMapper */,
+				A1EEA11027F6EB55004871E0 /* SwiftyJSON */,
+				A1EEA11327F6ECC3004871E0 /* Siesta */,
 			);
 			productName = EasyNote;
 			productReference = A12EF8BB27F330ED00B3C5F5 /* EasyNote.app */;
@@ -370,6 +504,9 @@
 			mainGroup = A12EF8B227F330ED00B3C5F5;
 			packageReferences = (
 				A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A1EEA10C27F6EB1B004871E0 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				A1EEA10F27F6EB54004871E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				A1EEA11227F6ECC2004871E0 /* XCRemoteSwiftPackageReference "siesta" */,
 			);
 			productRefGroup = A12EF8BC27F330ED00B3C5F5 /* Products */;
 			projectDirPath = "";
@@ -414,24 +551,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EEA10027F6E56A004871E0 /* HTTPMethod.swift in Sources */,
 				A12EF8C327F330ED00B3C5F5 /* HomeController.swift in Sources */,
 				A1A35E8A27F4862B006CDA58 /* FetchedResultsController+Extensions.swift in Sources */,
+				A1EEA12427F6FBC4004871E0 /* UserAPI.swift in Sources */,
 				A1A35E9227F4B057006CDA58 /* ColorAssets.swift in Sources */,
+				A1EEA10927F6E9F2004871E0 /* Task.swift in Sources */,
 				A12EF8FA27F34A3400B3C5F5 /* TableView+Extensions.swift in Sources */,
+				A1EEA12627F6FC41004871E0 /* EnvironmentManager.swift in Sources */,
+				A1EEA12D27F70329004871E0 /* EnvironmentPurpose.swift in Sources */,
 				A12EF8C927F330ED00B3C5F5 /* EasyNote.xcdatamodeld in Sources */,
+				A1EEA11A27F6EE48004871E0 /* Constants.swift in Sources */,
 				A156D3D627F59AF8005C7CD9 /* Localizable.swift in Sources */,
 				A156D3D127F59164005C7CD9 /* TextFields.swift in Sources */,
 				A12EF90427F3601100B3C5F5 /* AddNoteController.swift in Sources */,
 				A1A35E8327F465D1006CDA58 /* TextField+Extensions.swift in Sources */,
 				A156D3CF27F58E19005C7CD9 /* Buttons.swift in Sources */,
+				A1EEA12827F6FD2C004871E0 /* URLComponentsExtension.swift in Sources */,
 				A156D3D327F595FB005C7CD9 /* Button+Extensions.swift in Sources */,
 				A1A35E7F27F462F2006CDA58 /* TextView+Extensions.swift in Sources */,
 				A1A35E8127F46531006CDA58 /* GestureRecognizer+Extensions.swift in Sources */,
+				A1EEA12B27F7028E004871E0 /* ServiceProtocol.swift in Sources */,
+				A1EEA10727F6E914004871E0 /* Error.swift in Sources */,
+				A1EEA12227F6F130004871E0 /* Environment.swift in Sources */,
 				A156D3E227F5A69A005C7CD9 /* LoginController.swift in Sources */,
+				A1EEA10427F6E830004871E0 /* NetworkError.swift in Sources */,
 				A12EF8BF27F330ED00B3C5F5 /* AppDelegate.swift in Sources */,
 				A12EF8C127F330ED00B3C5F5 /* SceneDelegate.swift in Sources */,
 				A12EF8F527F3484B00B3C5F5 /* NoteListController.swift in Sources */,
+				A1EEA11727F6ED14004871E0 /* Siesta+SwiftyJSON.swift in Sources */,
+				A1EEA10B27F6EAA7004871E0 /* BaseAPI.swift in Sources */,
+				A1EEA10227F6E778004871E0 /* ParametersEncoding.swift in Sources */,
 				A12EF8FE27F353DB00B3C5F5 /* CardViewCell.swift in Sources */,
+				A1EEA11C27F6EF94004871E0 /* APIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +942,30 @@
 				kind = branch;
 			};
 		};
+		A1EEA10C27F6EB1B004871E0 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		A1EEA10F27F6EB54004871E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A1EEA11227F6ECC2004871E0 /* XCRemoteSwiftPackageReference "siesta" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bustoutsolutions/siesta";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -807,6 +983,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A1ADE27127F5D12F006C30B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		A1EEA10D27F6EB1B004871E0 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1EEA10C27F6EB1B004871E0 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		A1EEA11027F6EB55004871E0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1EEA10F27F6EB54004871E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		A1EEA11327F6ECC3004871E0 /* Siesta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1EEA11227F6ECC2004871E0 /* XCRemoteSwiftPackageReference "siesta" */;
+			productName = Siesta;
 		};
 /* End XCSwiftPackageProductDependency section */
 
